@@ -3,7 +3,6 @@ name: Publish Docker Image
 on:
   push:
     branches: [ "main" ]   # build & push when you push to main
-  workflow_dispatch:        # allow manual trigger
 
 jobs:
   build_and_push:
