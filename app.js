@@ -13,7 +13,7 @@ function connect() {
       console.log("DB not ready… retrying in 2 seconds");
       return setTimeout(connect, 2000);
     }
-    console.log("Connected to DB!");
+    console.log("Connected to DB 2020!");
     startServer();
   });
 }
@@ -22,7 +22,7 @@ function startServer() {
   const http = require("http");
 
   var server = http.createServer((req, res) => {
-    res.end("DB connection OK!");
+    res.end("Hello world!");
   });
 
   server.listen(3000, () => console.log("Server running on port 3000"));
