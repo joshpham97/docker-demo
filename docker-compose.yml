@@ -8,20 +8,8 @@ services:
       - "3306:3306"
 
 # Part 1
-  # app:
-  #   build: .
-  #   depends_on:
-  #     - db
-  #   environment:
-  #     DB_HOST: db
-  #     DB_USER: root
-  #     DB_PASSWORD: rootpass
-  #     DB_NAME: testdb
-  #   ports:
-  #     - "3000:3000"
-
   app:
-    image: joshphampolymtl/docker-demo:latest   # <-- pulled from Docker Hub
+    build: .
     depends_on:
       - db
     environment:
@@ -31,5 +19,17 @@ services:
       DB_NAME: testdb
     ports:
       - "3000:3000"
+
+  # app:
+  #   image: joshphampolymtl/docker-demo:latest   # <-- pulled from Docker Hub
+  #   depends_on:
+  #     - db
+  #   environment:
+  #     DB_HOST: db
+  #     DB_USER: root
+  #     DB_PASSWORD: rootpass
+  #     DB_NAME: testdb
+  #   ports:
+  #     - "3000:3000"
 
 
